@@ -1,0 +1,11 @@
+<div  class="card" style="width: 18rem;">
+    <img src="..." class="card-img-top" alt="...">
+    <div class="card-body">
+        <h5 class="card-title"> {{ producto.nombre | uppercase }} </h5>
+        <h3> {{ producto.precio | currency:'$ ' }} </h3>
+        <p class="card-text">{{ producto.descripcion }}</p>
+        <p class="card-text">Categoría: {{ producto.categoria }}</p>
+        <!-- <button (click)="verproducto()" class="btn btn-outline btn-danger btn-block">Ver producto</button> -->
+        <a class="btn btn-danger btn-block" [routerLink]="['/producto']" > Ver producto</a>
+    </div>
+</div>
