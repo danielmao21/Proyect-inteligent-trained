@@ -10,18 +10,23 @@ import { ProductosService } from 'src/app/servicios/productos.service';
 export class ProductoComponent implements OnInit {
 
 
-  Producto:  any={
-
-  }
+  Producto: any = {}
+  
 
   constructor(
     private activeroute: ActivatedRoute,
     private _ProductosService: ProductosService
-  ){
-    this.activeroute.params.subscribe(params => console.log(params));
+  ) {
+    this.activeroute.params.subscribe(params => {
+      console.log(params);
+      
+      this.Producto = this._ProductosService.getProductosByid(params['id']);
+      console.log(this.Producto);
+      
+    });
   }
 
   ngOnInit(): void {
-      
+
   }
 }

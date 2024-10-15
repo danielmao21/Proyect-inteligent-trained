@@ -1,5 +1,5 @@
 <div class="row">
-    <div *ngFor="let producto of productos;" class="col-md-4 mt-3" >
-         <app-producto-tarjeta  [producto]="producto"></app-producto-tarjeta>
+    <div *ngFor="let producto of productos; let i = index of productos " class="col-md-4 mt-3">
+        <app-producto-tarjeta [index]="i" [producto]="producto"></app-producto-tarjeta>
     </div>
 </div>

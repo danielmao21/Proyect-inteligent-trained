@@ -1,0 +1,14 @@
+<div *ngIf="productos.length > 0">
+    <div *ngFor="let producto of productos">
+      <h3>{{ producto.nombre }}</h3>
+      <p>{{ producto.descripcion }}</p>
+      <p><strong>Precio:</strong> {{ producto.precio }}</p>
+      <p><strong>Categoría:</strong> {{ producto.categoria }}</p>
+      <p><strong>Stock:</strong> {{ producto.stock }}</p>
+    </div>
+  </div>
+  
+  <div *ngIf="productos.length === 0">
+    <p>No se encontraron productos con los criterios proporcionados.</p>
+  </div>
+  

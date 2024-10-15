@@ -9,6 +9,7 @@ import { Producto, ProductosService } from 'src/app/servicios/productos.service'
 export class ProductosComponent {
 
   productos: Producto []= [];
+  
   constructor( private _productosservicio: ProductosService){
    
   }

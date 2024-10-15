@@ -1,12 +1,28 @@
 <div class="row">
-        <div class="col-md-6">
-            <div class="card">
-                <div class="card-body">
-                    <h5>aqui viene el precio</h5>
-                </div>
-                <div class="card-text">
-                    <p>contenido</p>
-                </div>
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">
+                    {{Producto.nombre}}
+                </h5>
+                <h5>{{ Producto.precio | currency:'$ ' }}</h5>
             </div>
+            <div class="card-text">
+                <p class="card-text">{{ Producto.descripcion }}</p>
+                <p class="card-text">Categoría: {{ Producto.categoria }}</p>
+            </div>
+
+            <ng-container *ngIf="Producto.stock > 0; else productoagotado">
+                <div>
+                    <p class="disponible">{{Producto.stock}} Unidades Disponbles</p>
+
+                </div>
+            </ng-container>
+            <ng-template #productoagotado>
+                <div>
+                    <p class="agotado">Producto no disponible </p>
+                </div>
+            </ng-template>
         </div>
+    </div>
 </div>

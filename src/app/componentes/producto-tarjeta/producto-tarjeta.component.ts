@@ -11,13 +11,24 @@ export class ProductoTarjetaComponent implements OnInit {
 
   @Input() producto: any = {
   }
-  // @Input() index: Number;
+
+
+  @Input() index!: Number;
+
+
 
   constructor(
     private router: Router
-  ){}
+  ) { }
 
   ngOnInit(): void {
     console.log(this.producto);
+  }
+
+  verproducto() {
+
+    console.log(this.index);
+    this.router.navigate(['/producto', this.index])
+
   }
 }

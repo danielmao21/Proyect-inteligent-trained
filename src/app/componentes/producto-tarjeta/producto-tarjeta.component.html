@@ -5,7 +5,7 @@
         <h3> {{ producto.precio | currency:'$ ' }} </h3>
         <p class="card-text">{{ producto.descripcion }}</p>
         <p class="card-text">Categoría: {{ producto.categoria }}</p>
-        <!-- <button (click)="verproducto()" class="btn btn-outline btn-danger btn-block">Ver producto</button> -->
-        <a class="btn btn-danger btn-block" [routerLink]="['/producto']" > Ver producto</a>
+        <button (click)="verproducto()" class="btn btn-outline btn-danger btn-block">Ver producto</button>
+        <!-- <a class="btn btn-danger btn-block" [routerLink]="['/producto']" > Ver producto</a> -->
     </div>
 </div>

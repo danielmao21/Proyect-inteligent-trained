@@ -10,6 +10,7 @@ import { NosotrosComponent } from './componentes/nosotros/nosotros.component';
 import { ProductoTarjetaComponent } from './componentes/producto-tarjeta/producto-tarjeta.component';
 import { ProductoComponent } from './componentes/producto/producto.component';
 import { ProductosComponent } from './componentes/productos/productos.component';
+import { BuscadorComponent } from './componentes/buscador/buscador.component';
 
 
 
@@ -22,7 +23,8 @@ import { ProductosComponent } from './componentes/productos/productos.component'
     HomeComponent,
     ProductosComponent,
     ProductoTarjetaComponent,
-    ProductoComponent
+    ProductoComponent,
+    BuscadorComponent
   ],
   imports: [
     BrowserModule,
